@@ -6,14 +6,19 @@ using std::endl;
 
 int main() {
   Stack* stack = new Stack(3);
-  stack->push(5);
-  stack->push(10);
-  stack->push(15);
 
-  cout << stack->pop() << endl;
-  cout << stack->pop() << endl;
-  cout << stack->pop() << endl;
-
+  for(int i = 0; i < 15;++i){
+	stack->push(i*5);
+  }
+  //cout << "Stack size" << stack->size() << endl;
+  
+  for(int i = 0; i < 15; ++i){
+	cout << stack->pop() << endl;
+  }
+  //cout << stack->pop() << endl;
+  //cout << stack->pop() << endl;
+  //cout << stack->pop() << endl;
+  
   delete stack;
 
   return 0;
